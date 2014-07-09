@@ -9,7 +9,13 @@ class CustomersController extends BaseController {
 	}
 	
 	public function getIndex(){
-		$customers = DB::table('customers')->simplePaginate(15);
+		// $customers = DB::table('customers')->simplePaginate(15);
+		$customers = DB::table('customers')
+			->where('id', '>', 200000)
+			->where('site_id', 2)
+			->orderBy('id', 'asc')
+			->simplePaginate(20);
+			// ->paginate(20);
 		return View::make('customers.index')
 			->with('customers', $customers);
 	}
