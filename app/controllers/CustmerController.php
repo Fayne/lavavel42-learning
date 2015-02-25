@@ -1,6 +1,6 @@
 <?php
 
-class CustomersController extends BaseController {
+class CustomerController extends BaseController {
 
 	protected $layout = 'layouts.main';
 	
