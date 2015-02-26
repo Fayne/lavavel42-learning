@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://dev.fayne.org',
+	'url' => 'http://laravel42.fayne.org',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -122,6 +122,12 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		// Vendor
+		'Cartalyst\Sentry\SentryServiceProvider',
+
+		// Custom
+		'Providers\RouteServiceProvider',
+
 	),
 
 	/*
@@ -188,6 +194,9 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+
+		// Vendor
+		'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 
 	),
 
