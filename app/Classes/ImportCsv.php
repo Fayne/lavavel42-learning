@@ -51,7 +51,8 @@ class ImportCsv
         $header = $reader->fetchOne();
 
         // Get all data without header
-        $data = $reader->setOffset(1)->fetchAssoc();
+        // According to the documentation, offset should be 1, but first row will be passed.
+        $data = $reader->setOffset(0)->fetchAssoc();
 
         array_map(function ($row) use ($header) {
             DB::table($this->table)->insert($row);
