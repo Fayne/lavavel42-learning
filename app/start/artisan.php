@@ -11,3 +11,7 @@
 |
 */
 
+//Artisan::add(new FooCommand);
+//Artisan::add(new Foo2Command);
+//Artisan::add(new BarCommand);
+Artisan::add(new CsvImportCommand);
